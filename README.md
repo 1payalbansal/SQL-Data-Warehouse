@@ -6,8 +6,10 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 ## 🏗️ Data Architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+
+```
 ┌──────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  Sources │────▶│    BRONZE    │────▶│    SILVER    │────▶│     GOLD     │────▶│    Consumers    │
+│  Sources │───▶│    BRONZE    │────▶│    SILVER    │───▶│     GOLD     │─ ──▶│    Consumers    │
 │ CRM / ERP│     │   Raw Data   │     │ Clean & Std  │     │Business-Ready│     │ BI / Analytics  │
 └──────────┘     └──────────────┘     └──────────────┘     └──────────────┘     └─────────────────┘
 ```
